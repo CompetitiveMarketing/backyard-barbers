@@ -1,0 +1,1049 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0a08">
+<meta name="description" content="Backyard Barbers Darwin. Sharp fades, classic cuts and beard grooming in Millner. Book your appointment online.">
+<title>Backyard Barbers Darwin | Built Different. Cut Different.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --black:#0b0a08;
+ --dark:#14120f;
+ --panel:#1b1813;
+ --gold:#d5bb65;
+ --gold-light:#efd786;
+ --cream:#f3f0e8;
+ --muted:#aaa397;
+ --line:#ffffff22;
+ --max:1200px;
+}
+*{box-sizing:border-box}
+html{
+ scroll-behavior:smooth;
+ scroll-padding-top:90px;
+}
+body{
+ margin:0;
+ background:var(--black);
+ color:var(--cream);
+ font-family:'DM Sans',sans-serif;
+ overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+img{max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{
+ outline:2px solid var(--gold-light);
+ outline-offset:4px;
+}
+.wrap{
+ width:min(var(--max),calc(100% - 44px));
+ margin:auto;
+}
+.display{
+ font-family:'Barlow Condensed',Impact,sans-serif;
+ text-transform:uppercase;
+ line-height:.87;
+ letter-spacing:-.025em;
+}
+.kicker{
+ color:var(--gold);
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:.23em;
+ text-transform:uppercase;
+}
+.btn{
+ display:inline-flex;
+ justify-content:center;
+ align-items:center;
+ min-height:52px;
+ padding:15px 25px;
+ background:var(--gold);
+ color:#15120b;
+ border:1px solid var(--gold);
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:.08em;
+ text-transform:uppercase;
+ transition:background .2s,transform .2s;
+}
+.btn:hover{
+ background:var(--gold-light);
+ transform:translateY(-2px);
+}
+.btn.outline{
+ background:transparent;
+ color:white;
+ border-color:#ffffff85;
+}
+.btn.outline:hover{
+ border-color:var(--gold);
+ color:var(--gold);
+}
+header{
+ position:absolute;
+ z-index:20;
+ top:0;
+ left:0;
+ right:0;
+ border-bottom:1px solid var(--line);
+ background:#09080770;
+ backdrop-filter:blur(12px);
+}
+.header-inner{
+ height:88px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px;
+}
+.brand{
+ display:flex;
+ align-items:center;
+ gap:13px;
+ font:900 24px 'Barlow Condensed',sans-serif;
+ letter-spacing:.04em;
+}
+.brand img{
+ width:62px;
+ height:62px;
+ object-fit:contain;
+ border-radius:50%;
+}
+.brand small{
+ display:block;
+ color:var(--gold);
+ font:700 9px 'DM Sans',sans-serif;
+ letter-spacing:.2em;
+ margin-top:3px;
+}
+nav{
+ display:flex;
+ align-items:center;
+ gap:25px;
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:.08em;
+ text-transform:uppercase;
+}
+nav a{transition:color .2s}
+nav a:hover{color:var(--gold)}
+.hero{
+ min-height:800px;
+ position:relative;
+ display:flex;
+ align-items:center;
+ overflow:hidden;
+ background:#10100e;
+}
+.hero-image{
+ position:absolute;
+ inset:0;
+ background:
+ linear-gradient(90deg,
+  #090807 0%,
+  #090807f2 24%,
+  #090807bd 50%,
+  #09080750 100%),
+ url('haircut.jpg') center 42%/cover no-repeat;
+}
+.hero-image:after{
+ content:"";
+ position:absolute;
+ inset:0;
+ background:linear-gradient(
+  0deg,
+  var(--black),
+  transparent 29%
+ );
+}
+.hero-inner{
+ position:relative;
+ z-index:1;
+ padding:165px 0 105px;
+}
+.hero h1{
+ font-size:clamp(80px,12vw,162px);
+ max-width:960px;
+ margin:19px 0 28px;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+ max-width:485px;
+ color:#e3ddd2;
+ line-height:1.85;
+ font-size:15px;
+}
+.actions{
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:32px;
+}
+.proof{
+ display:flex;
+ flex-wrap:wrap;
+ gap:42px;
+ margin-top:65px;
+}
+.proof div{
+ font-size:12px;
+ font-weight:700;
+ color:#ded7ca;
+}
+.proof strong{
+ display:block;
+ font:900 36px 'Barlow Condensed',sans-serif;
+ color:var(--gold);
+ margin-bottom:3px;
+}
+.ticker{
+ background:var(--gold);
+ color:#15110a;
+ padding:19px 10px;
+ text-align:center;
+ font:800 17px 'Barlow Condensed',sans-serif;
+ letter-spacing:.12em;
+ text-transform:uppercase;
+}
+.ticker span{padding:0 22px}
+section.block{padding:110px 0}
+.heading{
+ display:flex;
+ justify-content:space-between;
+ align-items:end;
+ gap:30px;
+ margin-bottom:42px;
+}
+.heading h2,
+.story h2,
+.contact h2{
+ font-size:clamp(60px,8vw,106px);
+ margin:12px 0 0;
+}
+.heading p{
+ max-width:350px;
+ color:var(--muted);
+ line-height:1.85;
+ font-size:14px;
+}
+.services{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:14px;
+}
+.service{
+ background:var(--panel);
+ border:1px solid var(--line);
+ padding:31px;
+ min-height:275px;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ transition:transform .25s,border-color .25s;
+}
+.service:hover{
+ border-color:var(--gold);
+ transform:translateY(-4px);
+}
+.service .number{
+ color:var(--gold);
+ font-size:12px;
+ font-weight:800;
+}
+.service h3{
+ font:800 38px 'Barlow Condensed',sans-serif;
+ text-transform:uppercase;
+ margin:0 0 9px;
+}
+.service p{
+ color:var(--muted);
+ font-size:13px;
+ line-height:1.75;
+ margin:0 0 18px;
+}
+.price{
+ color:var(--gold);
+ font-size:15px;
+ font-weight:800;
+}
+.small-note{
+ color:var(--muted);
+ font-size:12px;
+ line-height:1.75;
+ margin-top:20px;
+}
+.light{
+ background:var(--cream);
+ color:#17130d;
+}
+.light .kicker{color:#8a702f}
+.story{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ align-items:center;
+ gap:70px;
+}
+.story-photo{
+ height:550px;
+ position:relative;
+ overflow:hidden;
+ background:#26221c;
+}
+.story-photo img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ display:block;
+}
+.story-photo:after{
+ content:"EST. 2011";
+ position:absolute;
+ bottom:24px;
+ left:24px;
+ background:var(--gold);
+ color:#15120b;
+ padding:14px 20px;
+ font:900 27px 'Barlow Condensed',sans-serif;
+}
+.story p{
+ color:#615c54;
+ font-size:15px;
+ line-height:1.95;
+}
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:13px;
+}
+.gallery figure{
+ margin:0;
+ overflow:hidden;
+ position:relative;
+ background:#201d17;
+}
+.gallery img{
+ width:100%;
+ height:465px;
+ object-fit:cover;
+ object-position:center 38%;
+ display:block;
+ transition:transform .4s;
+}
+.gallery figure:hover img{
+ transform:scale(1.045);
+}
+.gallery figcaption{
+ position:absolute;
+ bottom:0;
+ left:0;
+ right:0;
+ padding:45px 20px 20px;
+ background:linear-gradient(transparent,#000e);
+ font:800 22px 'Barlow Condensed',sans-serif;
+ text-transform:uppercase;
+ letter-spacing:.06em;
+}
+.shop-feature{
+ display:grid;
+ grid-template-columns:1.1fr 1fr;
+ gap:45px;
+ align-items:center;
+ margin-top:65px;
+ background:#1a1712;
+}
+.shop-feature img{
+ width:100%;
+ height:365px;
+ object-fit:cover;
+ display:block;
+}
+.shop-copy{padding:30px 35px}
+.shop-copy h3{
+ font:900 52px 'Barlow Condensed',sans-serif;
+ line-height:.95;
+ text-transform:uppercase;
+ margin:16px 0;
+}
+.shop-copy p{
+ color:var(--muted);
+ line-height:1.85;
+ font-size:14px;
+}
+.review-section{background:#12100d}
+.review-header{
+ display:flex;
+ align-items:end;
+ justify-content:space-between;
+ gap:20px;
+}
+.review-controls{display:flex;gap:9px}
+.arrow{
+ width:50px;
+ height:50px;
+ background:transparent;
+ border:1px solid #8e7847;
+ color:white;
+ font-size:21px;
+}
+.arrow:hover{
+ background:var(--gold);
+ color:#111;
+}
+.review-card{
+ margin-top:34px;
+ padding:48px;
+ min-height:290px;
+ background:#1c1913;
+ border:1px solid #65532d;
+}
+.stars{
+ color:var(--gold);
+ letter-spacing:5px;
+}
+.review-text{
+ font:700 clamp(26px,3.3vw,42px) 'Barlow Condensed',sans-serif;
+ line-height:1.3;
+ margin:27px 0;
+}
+.review-name{
+ color:var(--gold);
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:.09em;
+ text-transform:uppercase;
+}
+.review-count{
+ color:var(--muted);
+ font-size:12px;
+ margin-top:12px;
+}
+.contact{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:75px;
+ align-items:center;
+}
+.contact h2{
+ font-size:clamp(70px,9vw,125px);
+}
+.contact h2 span{color:var(--gold)}
+.contact p{
+ color:var(--muted);
+ line-height:1.85;
+}
+.details{border-top:1px solid var(--line)}
+.detail{
+ display:flex;
+ justify-content:space-between;
+ gap:20px;
+ padding:23px 0;
+ border-bottom:1px solid var(--line);
+ font-size:13px;
+}
+.detail b{
+ color:var(--gold);
+ font-size:11px;
+ letter-spacing:.1em;
+ text-transform:uppercase;
+}
+.detail span{
+ text-align:right;
+ line-height:1.7;
+}
+.detail a:hover{color:var(--gold)}
+footer{
+ padding:31px 0;
+ border-top:1px solid var(--line);
+ color:var(--muted);
+ font-size:12px;
+}
+.footer-inner{
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+}
+.mobile-dock{display:none}
+@media(max-width:900px){
+ nav{display:none}
+ .services{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+ }
+ .story,.contact{
+  grid-template-columns:1fr;
+  gap:38px;
+ }
+ .story-photo{height:450px}
+ .gallery img{height:370px}
+ .shop-feature{grid-template-columns:1fr}
+ .shop-feature img{height:350px}
+ .shop-copy{padding:0 32px 36px}
+ section.block{padding:80px 0}
+ .mobile-dock{
+  display:flex;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:30;
+  padding:10px;
+  padding-bottom:max(10px,env(safe-area-inset-bottom));
+  background:var(--black);
+  border-top:1px solid #5b4b29;
+  gap:10px;
+ }
+ .mobile-dock a{
+  flex:1;
+  text-align:center;
+  padding:15px 8px;
+  background:var(--gold);
+  color:#111;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+ }
+ .mobile-dock a:last-child{
+  background:#25221c;
+  color:white;
+  border:1px solid #ffffff55;
+ }
+ body{padding-bottom:75px}
+}
+@media(max-width:600px){
+ .wrap{width:calc(100% - 32px)}
+ .header-inner{height:76px}
+ .brand{font-size:19px;gap:8px}
+ .brand img{width:49px;height:49px}
+ .brand small{font-size:7px}
+ header .btn{
+  font-size:10px;
+  padding:10px;
+  min-height:42px;
+ }
+ .hero{min-height:735px}
+ .hero-inner{padding:145px 0 75px}
+ .hero h1{
+  font-size:clamp(72px,16.5vw,108px);
+ }
+ .hero p{font-size:13px}
+ .hero-image{
+  background:
+  linear-gradient(90deg,#090807ed,#09080785),
+  url('haircut.jpg') center 35%/cover no-repeat;
+ }
+ .proof{gap:24px;margin-top:45px}
+ .proof strong{font-size:30px}
+ .ticker{font-size:12px}
+ .ticker span{padding:0 7px}
+ .heading{display:block}
+ .heading h2,.story h2{font-size:65px}
+ .services{grid-template-columns:1fr}
+ .service{min-height:220px}
+ .story-photo{height:360px}
+ .gallery{
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+ }
+ .gallery figure:first-child{grid-column:span 2}
+ .gallery img{height:275px}
+ .gallery figure:first-child img{height:390px}
+ .gallery figcaption{
+  font-size:17px;
+  padding:30px 12px 14px;
+ }
+ .shop-feature{margin-top:38px}
+ .shop-feature img{height:255px}
+ .shop-copy{padding:0 24px 28px}
+ .shop-copy h3{font-size:43px}
+ .review-card{padding:27px}
+ .contact h2{font-size:78px}
+ .footer-inner{display:block}
+}
+@media(max-width:370px){
+ .brand{font-size:17px}
+ .brand img{width:44px;height:44px}
+ .hero h1{font-size:67px}
+ .hero .btn{padding:13px 15px}
+ .ticker{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*:before,*:after{
+  transition:none!important;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="wrap header-inner">
+  <a class="brand" href="#home">
+   <img src="logo.jpg" alt="Backyard Barbers logo">
+   <span>
+    BACKYARD BARBERS
+    <small>DARWIN · NORTHERN TERRITORY</small>
+   </span>
+  </a>
+
+  <nav aria-label="Main navigation">
+   <a href="#services">Services</a>
+   <a href="#story">Our story</a>
+   <a href="#gallery">Gallery</a>
+   <a href="#reviews">Reviews</a>
+   <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+   Book a cut ↗
+  </a>
+ </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+ <div class="hero-image"></div>
+ <div class="wrap hero-inner">
+  <div class="kicker">
+   Darwin's neighbourhood barbers · Since 2011
+  </div>
+
+  <h1 class="display">
+   BUILT<br>
+   DIFFERENT.<br>
+   <span>CUT DIFFERENT.</span>
+  </h1>
+
+  <p>
+   Good people. Sharp fades. Proper barbering.
+   From humble backyard beginnings to a Darwin
+   favourite — the chair's ready when you are.
+  </p>
+
+  <div class="actions">
+   <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+    Book your appointment ↗
+   </a>
+   <a class="btn outline" href="#services">
+    Explore services ↓
+   </a>
+  </div>
+
+  <div class="proof">
+   <div>
+    <strong>2011</strong>
+    Where it all started
+   </div>
+   <div>
+    <strong>Millner</strong>
+    Darwin, Northern Territory
+   </div>
+   <div>
+    <strong>BOOK</strong>
+    Online through Fresha
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="ticker">
+ FRESH FADES <span>✦</span>
+ CLEAN CUTS <span>✦</span>
+ GOOD VIBES <span>✦</span>
+ DARWIN MADE
+</div>
+
+<section class="block" id="services">
+ <div class="wrap">
+  <div class="heading">
+   <div>
+    <div class="kicker">01 / What we do</div>
+    <h2 class="display">THE LINEUP.</h2>
+   </div>
+   <p>
+    From the everyday tidy-up to a razor-sharp fade,
+    choose your service and lock in your chair.
+   </p>
+  </div>
+
+  <div class="services">
+   <article class="service">
+    <span class="number">01 / THE CLASSIC</span>
+    <div>
+     <h3>Standard Cut</h3>
+     <p>Clean, sharp and made to suit your style.</p>
+     <span class="price">FROM $40</span>
+    </div>
+   </article>
+
+   <article class="service">
+    <span class="number">02 / THE FRESH ONE</span>
+    <div>
+     <h3>Zero / Skin Fade</h3>
+     <p>Precise blending and a crisp finish.</p>
+     <span class="price">FROM $50</span>
+    </div>
+   </article>
+
+   <article class="service">
+    <span class="number">03 / THE FULL WORKS</span>
+    <div>
+     <h3>Fade + Beard</h3>
+     <p>A sharp fade paired with beard grooming.</p>
+     <span class="price">FROM $70</span>
+    </div>
+   </article>
+
+   <article class="service">
+    <span class="number">04 / THE COMBO</span>
+    <div>
+     <h3>Cut + Beard</h3>
+     <p>A complete refresh from top to bottom.</p>
+     <span class="price">FROM $60</span>
+    </div>
+   </article>
+
+   <article class="service">
+    <span class="number">05 / THE DETAIL</span>
+    <div>
+     <h3>Beard Line-Up</h3>
+     <p>Shape, trim and clean up your beard.</p>
+     <span class="price">FROM $20</span>
+    </div>
+   </article>
+
+   <article class="service">
+    <span class="number">06 / THE STUDENT</span>
+    <div>
+     <h3>Student Fade</h3>
+     <p>A fresh fade at the listed student rate.</p>
+     <span class="price">FROM $45</span>
+    </div>
+   </article>
+  </div>
+
+  <p class="small-note">
+   Indicative prices from the public Fresha menu.
+   Confirm current pricing when booking.
+  </p>
+
+  <div class="actions">
+   <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+    See full menu &amp; book ↗
+   </a>
+  </div>
+ </div>
+</section>
+
+<section class="block light" id="story">
+ <div class="wrap story">
+  <div class="story-photo">
+   <img src="interior.jpg"
+        alt="Inside Backyard Barbers Darwin"
+        loading="lazy">
+  </div>
+
+  <div>
+   <div class="kicker">02 / Our roots</div>
+   <h2 class="display">
+    FROM THE<br>
+    BACKYARD<br>
+    TO THE<br>
+    BARBERSHOP.
+   </h2>
+
+   <p>
+    It all started in a backyard in 2011.
+    What began as a passion for good cuts and good
+    company grew into a loyal community — and by
+    2015, Backyard Barbers had its own shop.
+   </p>
+
+   <p>
+    Today, the team brings that same laid-back
+    energy and attention to detail to every
+    appointment in Millner. No unnecessary fuss.
+    Just a proper cut and a place you can feel
+    at home.
+   </p>
+
+   <a class="btn" href="#contact">Come find us ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="block" id="gallery">
+ <div class="wrap">
+  <div class="heading">
+   <div>
+    <div class="kicker">03 / The craft</div>
+    <h2 class="display">
+     GOOD CUTS.<br>
+     NO SHORTCUTS.
+    </h2>
+   </div>
+   <p>
+    Real barbering. Real attention to detail.
+    Explore the cuts and the place behind the name.
+   </p>
+  </div>
+
+  <div class="gallery">
+   <figure>
+    <img src="haircut.jpg"
+         alt="Textured fade haircut at Backyard Barbers"
+         loading="lazy">
+    <figcaption>The Craft</figcaption>
+   </figure>
+
+   <figure>
+    <img src="fade-one.jpg"
+         alt="Sharp fade haircut"
+         loading="lazy">
+    <figcaption>The Fade</figcaption>
+   </figure>
+
+   <figure>
+    <img src="fade-two.jpg"
+         alt="Clean taper and braided detail"
+         loading="lazy">
+    <figcaption>The Detail</figcaption>
+   </figure>
+  </div>
+
+  <div class="shop-feature">
+   <img src="shopfront.jpg"
+        alt="Backyard Barbers storefront"
+        loading="lazy">
+
+   <div class="shop-copy">
+    <div class="kicker">More than just a haircut</div>
+    <h3>YOUR LOCAL.<br>YOUR BARBER.</h3>
+
+    <p>
+     A neighbourhood barbershop built on
+     community, conversation and clean cuts.
+     Find the team in Millner and book your
+     next appointment.
+    </p>
+
+    <a class="btn" href="#contact">Find the shop ↗</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="block review-section" id="reviews">
+ <div class="wrap">
+  <div class="review-header">
+   <div>
+    <div class="kicker">04 / Word on the street</div>
+    <h2 class="display" style="margin:12px 0 0;font-size:clamp(58px,8vw,100px)">
+     THE PEOPLE<br>HAVE SPOKEN.
+    </h2>
+   </div>
+
+   <div class="review-controls">
+    <button class="arrow" id="prev"
+            aria-label="Previous review">←</button>
+    <button class="arrow" id="next"
+            aria-label="Next review">→</button>
+   </div>
+  </div>
+
+  <div class="review-card">
+   <div class="stars">★★★★★</div>
+   <div class="review-text" id="review-text"
+        aria-live="polite"></div>
+   <div class="review-name" id="review-name"></div>
+   <div class="review-count" id="review-count"></div>
+  </div>
+
+  <p class="small-note">
+   Selected public Fresha customer comments.
+   Visit Fresha for the complete reviews.
+  </p>
+
+  <div class="actions">
+   <a class="btn outline" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+    Read all reviews ↗
+   </a>
+  </div>
+ </div>
+</section>
+
+<section class="block" id="contact">
+ <div class="wrap contact">
+  <div>
+   <div class="kicker">05 / Your chair awaits</div>
+
+   <h2 class="display">
+    PULL UP.<br>
+    <span>FRESHEN UP.</span>
+   </h2>
+
+   <p>
+    Jape Homemaker Village, Millner.
+    Lock in your appointment online or
+    give the team a call.
+   </p>
+
+   <div class="actions">
+    <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+     Book online ↗
+    </a>
+    <a class="btn outline" href="tel:+61403483773">
+     Call the shop ↗
+    </a>
+   </div>
+  </div>
+
+  <div class="details">
+   <div class="detail">
+    <b>Find us</b>
+    <span>
+     Jape Homemaker Village<br>
+     356–366 Bagot Road<br>
+     Millner NT 0810
+    </span>
+   </div>
+
+   <div class="detail">
+    <b>Phone</b>
+    <span>
+     <a href="tel:+61403483773">
+      0403 483 773
+     </a>
+    </span>
+   </div>
+
+   <div class="detail">
+    <b>Opening hours</b>
+    <span>
+     Tue–Thu 9am–6pm<br>
+     Fri 9am–8pm<br>
+     Sat 9am–3pm<br>
+     Sun–Mon closed
+    </span>
+   </div>
+
+   <div class="detail">
+    <b>Directions</b>
+    <span>
+     <a href="https://www.google.com/maps/search/?api=1&amp;query=Backyard+Barbers+Darwin+Millner">
+      Open Google Maps ↗
+     </a>
+    </span>
+   </div>
+
+   <div class="detail">
+    <b>Social</b>
+    <span>
+     <a href="https://www.facebook.com/BackyardBarberDarwin/">
+      Facebook ↗
+     </a>
+    </span>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <div class="wrap footer-inner">
+  <div>
+   © <span id="year"></span>
+   Backyard Barbers Darwin · Website concept demo
+  </div>
+  <div>Website concept by Competitive Marketing</div>
+ </div>
+</footer>
+
+<div class="mobile-dock">
+
+ <a href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+  Book online ↗
+ </a>
+ <a href="tel:+61403483773">
+  Call now ↗
+ </a>
+</div>
+
+<script>
+document.getElementById('year').textContent =
+ new Date().getFullYear();
+
+const reviews = [
+ {
+  text:"Great service, very professional and friendly",
+  name:"Douglas Z · Fresha"
+ },
+ {
+  text:"My boys are very happy with their cuts, they will be coming back",
+  name:"Adrienne M · Fresha"
+ },
+ {
+  text:"He was very talkative throughout the whole haircut and reassured what I had asked for",
+  name:"Trey C · Fresha"
+ },
+ {
+  text:"Best of the best",
+  name:"Paora T · Fresha"
+ },
+ {
+  text:"Thanks",
+  name:"Jesse D · Fresha"
+ }
+];
+
+let currentReview = 0;
+
+function showReview(){
+ const review = reviews[currentReview];
+
+ document.getElementById('review-text').textContent =
+  '“' + review.text + '”';
+
+ document.getElementById('review-name').textContent =
+  review.name;
+
+ document.getElementById('review-count').textContent =
+  (currentReview + 1) + ' / ' + reviews.length;
+}
+
+document.getElementById('prev').addEventListener(
+ 'click',
+ function(){
+  currentReview =
+   (currentReview - 1 + reviews.length) %
+   reviews.length;
+  showReview();
+ }
+);
+
+document.getElementById('next').addEventListener(
+ 'click',
+ function(){
+  currentReview =
+   (currentReview + 1) % reviews.length;
+  showReview();
+ }
+);
+
+showReview();
+</script>
+
+</body>
+</html>
