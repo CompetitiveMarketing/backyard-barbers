@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#11100d">
-<meta name="description" content="Backyard Barbers Darwin. Fresh fades, sharp cuts and beard grooming in Millner, Northern Territory.">
+<meta name="description" content="Backyard Barbers Darwin. Fresh fades, sharp cuts and beard grooming in Millner, Northern Territory. Book online.">
 <title>Backyard Barbers Darwin | Fresh Is a Feeling</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,7 +72,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  font-weight:800;
  letter-spacing:.09em;
  text-transform:uppercase;
- transition:.25s ease;
+ transition:background .25s,transform .25s;
 }
 .btn:hover{
  background:var(--gold2);
@@ -88,7 +88,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  color:var(--gold);
 }
 .btn .arrow{font-size:18px}
-
 .site-header{
  position:absolute;
  z-index:30;
@@ -146,7 +145,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  transition:color .2s;
 }
 .desktop-nav a:hover{color:var(--gold)}
-
 .hero{
  position:relative;
  min-height:850px;
@@ -253,7 +251,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  white-space:nowrap;
  pointer-events:none;
 }
-
 .marquee{
  background:var(--gold);
  color:var(--ink);
@@ -275,7 +272,6 @@ button,a{-webkit-tap-highlight-color:transparent}
 @keyframes marquee{
  to{transform:translateX(-50%)}
 }
-
 .intro{
  background:var(--paper);
  color:var(--ink);
@@ -312,7 +308,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  margin:0 0 24px;
 }
 .intro-content strong{color:var(--ink)}
-
 .section-head{
  display:flex;
  justify-content:space-between;
@@ -330,7 +325,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  line-height:1.9;
  color:var(--muted);
 }
-
 .cuts{padding:115px 0 125px}
 .cuts-grid{
  display:grid;
@@ -341,6 +335,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  position:relative;
  min-height:750px;
  overflow:hidden;
+ margin:0;
 }
 .cut-main img{
  width:100%;
@@ -402,7 +397,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  color:var(--muted);
  line-height:1.7;
 }
-
 .menu{
  background:var(--paper);
  color:var(--ink);
@@ -467,7 +461,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  margin:22px 0 0;
 }
 .menu .btn{margin-top:30px}
-
 .story{
  display:grid;
  grid-template-columns:1fr 1fr;
@@ -518,13 +511,12 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:.08em;
  text-transform:uppercase;
 }
-
-.reviews{padding:115px 0 120px}
+.reviews{padding:100px 0 105px}
 .review-layout{
  display:grid;
- grid-template-columns:.75fr 1.25fr;
- gap:75px;
- align-items:center;
+ grid-template-columns:.8fr 1.2fr;
+ gap:65px;
+ align-items:start;
 }
 .review-left h2{
  font-size:clamp(75px,8vw,125px);
@@ -534,24 +526,46 @@ button,a{-webkit-tap-highlight-color:transparent}
 .review-left p{
  color:var(--muted);
  line-height:1.9;
- font-size:13px;
- max-width:310px;
+ font-size:14px;
+ max-width:330px;
+}
+.rating-strip{
+ display:flex;
+ align-items:center;
+ gap:16px;
+ margin:25px 0;
+}
+.rating-number{
+ font:400 70px Anton,sans-serif;
+ color:var(--gold);
+ line-height:1;
+}
+.rating-info{
+ font-size:12px;
+ line-height:1.7;
+ color:var(--muted);
+}
+.rating-info strong{
+ display:block;
+ color:var(--gold);
+ letter-spacing:3px;
+ font-size:16px;
 }
 .review-panel{
  border-top:2px solid var(--gold);
- padding:40px 0;
+ padding:32px 0 0;
 }
 .review-stars{
- font-size:21px;
- letter-spacing:6px;
+ font-size:19px;
+ letter-spacing:5px;
  color:var(--gold);
 }
 .review-quote{
- font-size:clamp(23px,3vw,38px);
+ font-size:clamp(24px,2.6vw,35px);
  font-weight:600;
- line-height:1.55;
- min-height:150px;
- margin:30px 0;
+ line-height:1.45;
+ margin:24px 0;
+ min-height:100px;
 }
 .review-person{
  font-size:12px;
@@ -564,7 +578,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  display:flex;
  justify-content:space-between;
  align-items:center;
- margin-top:35px;
+ margin-top:32px;
 }
 .review-count{
  color:var(--muted);
@@ -575,8 +589,8 @@ button,a{-webkit-tap-highlight-color:transparent}
  gap:8px;
 }
 .review-buttons button{
- width:52px;
- height:52px;
+ width:48px;
+ height:48px;
  background:transparent;
  border:1px solid #6c5d3e;
  color:white;
@@ -586,7 +600,20 @@ button,a{-webkit-tap-highlight-color:transparent}
  background:var(--gold);
  color:var(--ink);
 }
-
+.review-buttons button:disabled{
+ opacity:.35;
+ cursor:not-allowed;
+}
+.review-buttons button:disabled:hover{
+ background:transparent;
+ color:white;
+}
+.review-source{
+ margin-top:22px;
+ color:var(--muted);
+ font-size:12px;
+ line-height:1.7;
+}
 .visit{
  background:var(--gold);
  color:var(--ink);
@@ -639,7 +666,6 @@ button,a{-webkit-tap-highlight-color:transparent}
  text-decoration:underline;
  text-underline-offset:4px;
 }
-
 footer{
  padding:34px 0;
  background:var(--ink);
@@ -674,7 +700,6 @@ footer{
  .story-copy{padding:65px 35px}
  .review-layout{gap:40px}
 }
-
 @media(max-width:750px){
  .container{width:calc(100% - 36px)}
  .header-inner{height:76px}
@@ -730,7 +755,7 @@ footer{
  .intro-content p{font-size:14px}
  .section-head,.menu-intro{display:block}
  .section-title{font-size:clamp(67px,13vw,105px)}
- .cuts,.menu,.reviews{padding:80px 0}
+ .cuts,.menu{padding:80px 0}
  .cuts-grid{
   grid-template-columns:1fr;
   gap:12px;
@@ -752,12 +777,20 @@ footer{
  .story-photo{min-height:390px}
  .story-copy{padding:65px 22px 75px}
  .story-copy h2{font-size:80px}
+ .reviews{padding:75px 0 80px}
  .review-layout{
   grid-template-columns:1fr;
-  gap:30px;
+  gap:28px;
  }
  .review-left h2{font-size:85px}
- .review-quote{min-height:120px}
+ .review-left p{margin-bottom:18px}
+ .rating-strip{margin:18px 0}
+ .review-quote{
+  min-height:0;
+  font-size:27px;
+  margin:22px 0;
+ }
+ .review-nav{margin-top:25px}
  .visit{padding:75px 0}
  .visit-grid{
   grid-template-columns:1fr;
@@ -796,7 +829,6 @@ footer{
  }
  body{padding-bottom:75px}
 }
-
 @media(max-width:420px){
  .brand-word{font-size:17px}
  .brand-word small{letter-spacing:.13em}
@@ -826,7 +858,7 @@ footer{
 <header class="site-header">
  <div class="container header-inner">
   <a class="brand" href="#home">
-   <img src="logo.jpg" alt="Backyard Barbers logo">
+   <img src="logo.jpg" alt="Backyard Barbers gold and black logo">
    <span class="brand-word">
     BACKYARD BARBERS
     <small>DARWIN · NORTHERN TERRITORY</small>
@@ -852,7 +884,7 @@ footer{
 <section class="hero" id="home">
  <div class="hero-copy">
   <div class="hero-stamp">
-   Millner, Darwin · Est. 2011
+   Millner, Darwin · Local barbering
   </div>
 
   <h1 class="display">
@@ -879,7 +911,7 @@ footer{
 
  <div class="hero-side">
   <img src="haircut.jpg"
-       alt="Fresh fade at Backyard Barbers"
+       alt="Fresh haircut at Backyard Barbers"
        fetchpriority="high">
  </div>
 
@@ -932,8 +964,8 @@ footer{
     </h2>
    </div>
    <p>
-    No stock-photo gallery. Just real cuts and
-    a closer look at the craft behind the chair.
+    A closer look at the cuts, the details and
+    the craft behind the chair.
    </p>
   </div>
 
@@ -955,7 +987,7 @@ footer{
 
     <figure>
      <img src="haircut.jpg"
-          alt="Textured haircut with a clean fade"
+          alt="Textured haircut with a clean finish"
           loading="lazy">
      <figcaption>THE FINISH.</figcaption>
     </figure>
@@ -964,10 +996,11 @@ footer{
 
   <div class="cuts-foot">
    <p>
-    Actual Backyard Barbers haircut photography.
-    Your next fresh cut could be one of them.
+    Fresh cuts, clean finishes and attention to detail.
+    Ready for yours?
    </p>
-   <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+   
+<a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
     Get in the chair ↗
    </a>
   </div>
@@ -990,6 +1023,7 @@ footer{
   </div>
 
   <div class="menu-list">
+
    <div class="menu-item">
     <div>
      <h3>Standard Cut</h3>
@@ -1000,16 +1034,10 @@ footer{
     </div>
    </div>
 
-   
-<div class="menu-price">
-     <small>From</small>$40
-    </div>
-   </div>
-
    <div class="menu-item">
     <div>
      <h3>Zero / Skin Fade</h3>
-     <p>Precision blending with a sharp finish.</p>
+     <p>Precise blending for a sharp, fresh finish.</p>
     </div>
     <div class="menu-price">
      <small>From</small>$50
@@ -1018,7 +1046,7 @@ footer{
 
    <div class="menu-item">
     <div>
-     <h3>Fade + Beard</h3>
+     <h3>Zero / Skin Fade + Beard</h3>
      <p>A fresh fade paired with beard grooming.</p>
     </div>
     <div class="menu-price">
@@ -1028,8 +1056,8 @@ footer{
 
    <div class="menu-item">
     <div>
-     <h3>Cut + Beard</h3>
-     <p>A complete refresh from top to bottom.</p>
+     <h3>Standard Cut + Beard</h3>
+     <p>The complete tidy-up for hair and beard.</p>
     </div>
     <div class="menu-price">
      <small>From</small>$60
@@ -1038,8 +1066,8 @@ footer{
 
    <div class="menu-item">
     <div>
-     <h3>Beard Line-Up</h3>
-     <p>Shape, trim and sharpen your beard.</p>
+     <h3>Beard Trim &amp; Line-Up</h3>
+     <p>Clean shaping and a neat, defined finish.</p>
     </div>
     <div class="menu-price">
      <small>From</small>$20
@@ -1048,23 +1076,23 @@ footer{
 
    <div class="menu-item">
     <div>
-     <h3>Student Fade</h3>
-     <p>Fresh fade at the listed student rate.</p>
+     <h3>Student Zero / Skin Fade</h3>
+     <p>Fresh fades at the student service rate.</p>
     </div>
     <div class="menu-price">
      <small>From</small>$45
     </div>
    </div>
+
   </div>
 
   <p class="menu-note">
-   Indicative pricing from the previously referenced
-   Fresha menu. Confirm current services and prices
-   before publishing as the official website.
+   Prices are indicative and may change.
+   Confirm your service and total when booking.
   </p>
 
   <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
-   View full menu &amp; book ↗
+   View services &amp; book ↗
   </a>
  </div>
 </section>
@@ -1072,37 +1100,37 @@ footer{
 <section class="story" id="about">
  <div class="story-photo">
   <img src="interior.jpg"
-       alt="Inside the Backyard Barbers shop"
+       alt="Inside Backyard Barbers Darwin"
        loading="lazy">
  </div>
 
  <div class="story-copy">
-  <div class="eyebrow">The story behind the name</div>
+  <div class="eyebrow">More than the haircut</div>
+
   <h2 class="display">
-   BACKYARD<br>
-   ROOTS.<br>
-   <span>REAL<br>CRAFT.</span>
+   YOUR<br>
+   LOCAL.<br>
+   <span>YOUR<br>BARBER.</span>
   </h2>
 
   <p>
-   The name says it all. Backyard Barbers started
-   with a passion for the craft and the community
-   around it. From humble beginnings to a
-   neighbourhood barbershop, the focus has always
-   been on quality cuts and good people.
+   A great barbershop is about more than what happens
+   in the chair. It's the atmosphere, the conversation
+   and knowing you're in good hands.
   </p>
 
   <p>
-   Today, that same down-to-earth energy lives
-   on in Millner. Come for the cut. Stay for
-   the atmosphere. Leave feeling fresh.
+   At Backyard Barbers, the focus is on quality cuts,
+   a welcoming experience and getting the details right.
+   Whether you're a regular or booking your first visit,
+   there's a chair waiting for you.
   </p>
 
   <div class="story-stat">
-   <strong>2011</strong>
+   <strong>5.0</strong>
    <span>
-    The beginning<br>
-    of the Backyard story
+    Customer rating<br>
+    on Fresha
    </span>
   </div>
  </div>
@@ -1110,63 +1138,96 @@ footer{
 
 <section class="reviews" id="reviews">
  <div class="container review-layout">
+
   <div class="review-left">
    <div class="eyebrow">The word around Darwin</div>
+
    <h2 class="display">
-    GOOD<br>
+    REAL<br>
     CUTS.<br>
-    <span>GOOD<br>WORDS.</span>
+    <span>REAL<br>LOVE.</span>
    </h2>
+
    <p>
-    The people in the chair say it best.
-    Read more customer feedback on Fresha.
+    The people who sit in the chair say it best.
+    Here's what customers have to say about
+    Backyard Barbers.
    </p>
+
+   <div class="rating-strip">
+    <div class="rating-number">5.0</div>
+    <div class="rating-info">
+     <strong>★★★★★</strong>
+     Rated on Fresha
+    </div>
+   </div>
+
    <a class="btn dark" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
-    Visit Fresha ↗
+    Explore customer reviews ↗
    </a>
   </div>
 
   <div class="review-panel">
-   <div class="review-stars" aria-label="Five stars">★★★★★</div>
-   <blockquote class="review-quote" id="reviewText"
-               aria-live="polite"></blockquote>
-   <div class="review-person" id="reviewPerson"></div>
+   <div class="review-stars" aria-label="Five stars">
+    ★★★★★
+   </div>
+
+   <blockquote class="review-quote"
+               id="review-quote"
+               aria-live="polite">
+    “Great service, very professional and friendly”
+   </blockquote>
+
+   <div class="review-person" id="review-person">
+    Douglas Z · Fresha
+   </div>
 
    <div class="review-nav">
-    <span class="review-count" id="reviewCount"></span>
+    <span class="review-count" id="review-count">
+     01 / 03
+    </span>
+
     <div class="review-buttons">
-     <button type="button" id="reviewPrev"
-             aria-label="Previous review">←</button>
-     <button type="button" id="reviewNext"
-             aria-label="Next review">→</button>
+     <button id="review-prev"
+             type="button"
+             aria-label="Previous review">
+      ←
+     </button>
+     <button id="review-next"
+             type="button"
+             aria-label="Next review">
+      →
+     </button>
     </div>
    </div>
 
-   <p style="color:var(--muted);font-size:11px;line-height:1.7;margin-top:25px">
-    Selected customer comments from the previously
-    referenced public Fresha listing. Verify
-    attribution before client handover.
+   <p class="review-source">
+    Customer feedback published on Fresha.
    </p>
   </div>
+
  </div>
 </section>
 
 <section class="visit" id="visit">
  <div class="container visit-grid">
+
   <div>
-   <div class="eyebrow" style="color:#51401c">
+   <div class="eyebrow" style="color:#5c4a1f">
     Your next cut starts here
    </div>
 
    <h2 class="display">
     PULL<br>
-    <span>UP.</span>
+    <span>UP.</span><br>
+    FRESHEN<br>
+    UP.
    </h2>
 
    <p>
-    Ready for that fresh-out-the-chair feeling?
-    Find Backyard Barbers in Millner, Darwin,
-    and book your next appointment.
+    Find Backyard Barbers in Millner, Darwin.
+    Book your appointment online and get ready
+    for that fresh-out-the-chair feeling.
    </p>
 
    <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
@@ -1175,6 +1236,7 @@ footer{
   </div>
 
   <div class="visit-details">
+
    <div class="visit-row">
     <b>Location</b>
     <span>
@@ -1207,21 +1269,24 @@ footer{
     <b>Directions</b>
     <span>
      <a href="https://www.google.com/maps/search/?api=1&amp;query=Backyard+Barbers+Darwin+Millner"
-        target="_blank" rel="noopener noreferrer">
-      Open in Google Maps ↗
+        target="_blank"
+        rel="noopener noreferrer">
+      Open Google Maps ↗
      </a>
     </span>
    </div>
 
    <div class="visit-row">
-    <b>Facebook</b>
+    <b>Social</b>
     <span>
      <a href="https://www.facebook.com/BackyardBarberDarwin/"
-        target="_blank" rel="noopener noreferrer">
-      Backyard Barbers Darwin ↗
+        target="_blank"
+        rel="noopener noreferrer">
+      Facebook ↗
      </a>
     </span>
    </div>
+
   </div>
  </div>
 </section>
@@ -1230,121 +1295,98 @@ footer{
 
 <footer>
  <div class="container footer-inner">
-  <div>
-   <div class="footer-brand">
-    <img src="logo.jpg" alt="Backyard Barbers logo">
-    BACKYARD BARBERS
-   </div>
-   <p>
-    © <span id="year"></span> Backyard Barbers Darwin.
-   </p>
+  <div class="footer-brand">
+   <img src="logo.jpg"
+        alt="Backyard Barbers logo"
+        loading="lazy">
+   BACKYARD BARBERS
   </div>
 
   <div>
-   Website concept by Competitive Marketing<br>
-   Demo only — subject to client approval
+   © <span id="year"></span>
+   Backyard Barbers Darwin · Website concept demo
+  </div>
+
+  <div>
+   Concept by Competitive Marketing
   </div>
  </div>
 </footer>
 
-<div class="mobile-bar">
+<div class="mobile-bar" aria-label="Quick booking actions">
  <a href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
-  Book online ↗
+  BOOK ONLINE ↗
  </a>
  <a href="tel:+61403483773">
-  Call now ↗
+  CALL NOW ↗
  </a>
 </div>
 
 <script>
-document.getElementById('year').textContent =
- new Date().getFullYear();
+(function(){
+ "use strict";
 
-const reviews = [
- {
-  text:"Great service, very professional and friendly",
-  name:"Douglas Z · Fresha"
- },
- {
-  text:"My boys are very happy with their cuts, they will be coming back",
-  name:"Adrienne M · Fresha"
- },
- {
-  text:"He was very talkative throughout the whole haircut and reassured what I had asked for",
-  name:"Trey C · Fresha"
- },
- {
-  text:"Best of the best",
-  name:"Paora T · Fresha"
- },
- {
-  text:"Thanks",
-  name:"Jesse D · Fresha"
- }
-];
-
-let activeReview = 0;
-
-const reviewText =
- document.getElementById('reviewText');
-const reviewPerson =
- document.getElementById('reviewPerson');
-const reviewCount =
- document.getElementById('reviewCount');
-
-function renderReview(){
- const review = reviews[activeReview];
-
- reviewText.textContent =
-  '“' + review.text + '”';
-
- reviewPerson.textContent =
-  review.name;
-
- reviewCount.textContent =
-  String(activeReview + 1).padStart(2,'0') +
-  ' / ' +
-  String(reviews.length).padStart(2,'0');
-}
-
-function changeReview(direction){
- activeReview =
-  (activeReview + direction + reviews.length) %
-  reviews.length;
-
- renderReview();
-}
-
-document.getElementById('reviewPrev')
- .addEventListener('click',function(){
-  changeReview(-1);
- });
-
-document.getElementById('reviewNext')
- .addEventListener('click',function(){
-  changeReview(1);
- });
-
-let touchStartX = null;
-
-reviewText.addEventListener('touchstart',function(e){
- touchStartX = e.changedTouches[0].screenX;
-},{passive:true});
-
-reviewText.addEventListener('touchend',function(e){
- if(touchStartX === null)return;
-
- const difference =
-  e.changedTouches[0].screenX - touchStartX;
-
- if(Math.abs(difference)>50){
-  changeReview(difference<0?1:-1);
+ const year=document.getElementById("year");
+ if(year){
+  year.textContent=new Date().getFullYear();
  }
 
- touchStartX = null;
-},{passive:true});
+ const reviews=[
+  {
+   quote:"Great service, very professional and friendly",
+   person:"Douglas Z · Fresha"
+  },
+  {
+   quote:"My boys are very happy with their cuts, they will be coming back",
+   person:"Adrienne M · Fresha"
+  },
+  {
+   quote:"Really knows what he’s doing, 2nd time booking with him and has not made a single mistake.",
+   person:"Kieran F · Fresha"
+  }
+ ];
 
-renderReview();
+ let current=0;
+
+ const quote=document.getElementById("review-quote");
+ const person=document.getElementById("review-person");
+ const count=document.getElementById("review-count");
+ const prev=document.getElementById("review-prev");
+ const next=document.getElementById("review-next");
+
+ function showReview(index){
+  current=(index+reviews.length)%reviews.length;
+
+  if(quote){
+   quote.textContent="“"+reviews[current].quote+"”";
+  }
+
+  if(person){
+   person.textContent=reviews[current].person;
+  }
+
+  if(count){
+   count.textContent=
+    String(current+1).padStart(2,"0")+
+    " / "+
+    String(reviews.length).padStart(2,"0");
+  }
+ }
+
+ if(prev){
+  prev.addEventListener("click",function(){
+   showReview(current-1);
+  });
+ }
+
+ if(next){
+  next.addEventListener("click",function(){
+   showReview(current+1);
+  });
+ }
+
+ showReview(0);
+})();
 </script>
 
 </body>
