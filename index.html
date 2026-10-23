@@ -3,9 +3,9 @@
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#11100d">
-<meta name="description" content="Backyard Barbers Darwin. Fresh fades, sharp cuts and beard grooming in Millner, Northern Territory. Book online.">
+<meta name="description" content="Backyard Barbers Darwin. Fresh fades, sharp cuts and beard grooming in Millner, Northern Territory. Book your next haircut online.">
 <title>Backyard Barbers Darwin | Fresh Is a Feeling</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,14 @@
  --line:#ffffff25;
  --max:1320px;
 }
+
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
+
+html{
+ scroll-behavior:smooth;
+ scroll-padding-top:85px;
+}
+
 body{
  margin:0;
  background:var(--ink);
@@ -32,18 +38,36 @@ body{
  font-family:'DM Sans',sans-serif;
  overflow-x:hidden;
 }
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font:inherit;cursor:pointer}
-button,a{-webkit-tap-highlight-color:transparent}
+
+img{
+ display:block;
+ max-width:100%;
+}
+
+a{
+ color:inherit;
+ text-decoration:none;
+}
+
+button{
+ font:inherit;
+ cursor:pointer;
+}
+
+button,a{
+ -webkit-tap-highlight-color:transparent;
+}
+
 :focus-visible{
  outline:2px solid var(--gold2);
  outline-offset:4px;
 }
+
 .container{
  width:min(var(--max),calc(100% - 48px));
  margin:auto;
 }
+
 .eyebrow{
  font-size:11px;
  font-weight:800;
@@ -51,6 +75,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  text-transform:uppercase;
  color:var(--gold);
 }
+
 .display{
  font-family:Anton,Impact,sans-serif;
  font-weight:400;
@@ -58,6 +83,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:-.015em;
  line-height:.92;
 }
+
 .btn{
  display:inline-flex;
  align-items:center;
@@ -74,20 +100,29 @@ button,a{-webkit-tap-highlight-color:transparent}
  text-transform:uppercase;
  transition:background .25s,transform .25s;
 }
+
 .btn:hover{
  background:var(--gold2);
  transform:translateY(-2px);
 }
+
 .btn.dark{
  background:transparent;
  border-color:#ffffff6a;
  color:var(--paper);
 }
+
 .btn.dark:hover{
  border-color:var(--gold);
  color:var(--gold);
 }
-.btn .arrow{font-size:18px}
+
+.btn .arrow{
+ font-size:18px;
+}
+
+/* HEADER */
+
 .site-header{
  position:absolute;
  z-index:30;
@@ -97,7 +132,9 @@ button,a{-webkit-tap-highlight-color:transparent}
  background:#11100dbd;
  border-bottom:1px solid #ffffff25;
  backdrop-filter:blur(14px);
+ -webkit-backdrop-filter:blur(14px);
 }
+
 .header-inner{
  height:88px;
  display:flex;
@@ -105,12 +142,14 @@ button,a{-webkit-tap-highlight-color:transparent}
  align-items:center;
  gap:20px;
 }
+
 .brand{
  display:flex;
  align-items:center;
  gap:12px;
  min-width:0;
 }
+
 .brand img{
  width:64px;
  height:64px;
@@ -118,6 +157,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  border-radius:50%;
  flex:none;
 }
+
 .brand-word{
  font-family:Anton,sans-serif;
  font-size:23px;
@@ -125,6 +165,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:.02em;
  white-space:nowrap;
 }
+
 .brand-word small{
  display:block;
  margin-top:7px;
@@ -132,11 +173,13 @@ button,a{-webkit-tap-highlight-color:transparent}
  color:var(--gold);
  letter-spacing:.22em;
 }
+
 .desktop-nav{
  display:flex;
  align-items:center;
  gap:27px;
 }
+
 .desktop-nav a{
  font-size:11px;
  font-weight:800;
@@ -144,7 +187,13 @@ button,a{-webkit-tap-highlight-color:transparent}
  text-transform:uppercase;
  transition:color .2s;
 }
-.desktop-nav a:hover{color:var(--gold)}
+
+.desktop-nav a:hover{
+ color:var(--gold);
+}
+
+/* HERO */
+
 .hero{
  position:relative;
  min-height:850px;
@@ -153,6 +202,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  overflow:hidden;
  background:#12110e;
 }
+
 .hero-copy{
  position:relative;
  z-index:2;
@@ -161,6 +211,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  justify-content:center;
  padding:155px 5vw 95px max(24px,calc((100vw - var(--max))/2));
 }
+
 .hero-copy:before{
  content:"";
  position:absolute;
@@ -168,6 +219,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  z-index:-1;
  background:radial-gradient(circle at 0 55%,#6c55231f,transparent 65%);
 }
+
 .hero-stamp{
  display:inline-flex;
  align-items:center;
@@ -178,39 +230,52 @@ button,a{-webkit-tap-highlight-color:transparent}
  text-transform:uppercase;
  color:var(--gold);
 }
+
 .hero-stamp:before{
  content:"";
  width:27px;
  height:1px;
  background:var(--gold);
 }
+
 .hero h1{
  font-size:clamp(94px,10.8vw,175px);
  margin:25px 0 20px;
 }
-.hero h1 span{display:block}
+
+.hero h1 span{
+ display:block;
+}
+
 .hero h1 .outline-word{
  color:transparent;
  -webkit-text-stroke:1.5px var(--gold);
 }
-.hero h1 .gold-word{color:var(--gold)}
+
+.hero h1 .gold-word{
+ color:var(--gold);
+}
+
 .hero-description{
  max-width:460px;
  font-size:15px;
  line-height:1.85;
  color:#d0c9bc;
 }
+
 .hero-actions{
  display:flex;
  gap:11px;
  flex-wrap:wrap;
  margin-top:30px;
 }
+
 .hero-side{
  position:relative;
  min-height:720px;
  overflow:hidden;
 }
+
 .hero-side img{
  width:100%;
  height:100%;
@@ -218,6 +283,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  object-position:45% center;
  filter:contrast(1.06) saturate(.83);
 }
+
 .hero-side:before{
  content:"";
  position:absolute;
@@ -227,6 +293,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  linear-gradient(90deg,#11100d 0%,transparent 34%),
  linear-gradient(0deg,#11100d99,transparent 42%);
 }
+
 .hero-side:after{
  content:"BACKYARD / DARWIN";
  position:absolute;
@@ -239,6 +306,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:.3em;
  writing-mode:vertical-rl;
 }
+
 .hero-vertical{
  position:absolute;
  z-index:3;
@@ -251,6 +319,9 @@ button,a{-webkit-tap-highlight-color:transparent}
  white-space:nowrap;
  pointer-events:none;
 }
+
+/* MOVING BRAND STRIP */
+
 .marquee{
  background:var(--gold);
  color:var(--ink);
@@ -258,35 +329,46 @@ button,a{-webkit-tap-highlight-color:transparent}
  white-space:nowrap;
  padding:17px 0;
 }
+
 .marquee-track{
  display:flex;
  width:max-content;
  animation:marquee 28s linear infinite;
 }
+
 .marquee-track span{
  font-family:Anton,sans-serif;
  font-size:20px;
  letter-spacing:.08em;
  padding-right:30px;
 }
+
 @keyframes marquee{
- to{transform:translateX(-50%)}
+ to{
+  transform:translateX(-50%);
+ }
 }
+
+/* INTRO */
+
 .intro{
  background:var(--paper);
  color:var(--ink);
  padding:110px 0 120px;
 }
+
 .intro-grid{
  display:grid;
  grid-template-columns:.95fr 1.05fr;
  gap:85px;
  align-items:center;
 }
+
 .intro-title{
  font-size:clamp(74px,9vw,142px);
  margin:20px 0 0;
 }
+
 .intro-title em{
  display:block;
  color:#9b813c;
@@ -297,17 +379,23 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:-.05em;
  line-height:1.1;
 }
+
 .intro-content{
  border-left:2px solid #bca055;
  padding-left:35px;
 }
+
 .intro-content p{
  font-size:17px;
  line-height:1.95;
  color:#514d45;
  margin:0 0 24px;
 }
-.intro-content strong{color:var(--ink)}
+
+.intro-content strong{
+ color:var(--ink);
+}
+
 .section-head{
  display:flex;
  justify-content:space-between;
@@ -315,34 +403,45 @@ button,a{-webkit-tap-highlight-color:transparent}
  gap:30px;
  margin-bottom:46px;
 }
+
 .section-title{
  font-size:clamp(65px,8.5vw,125px);
  margin:13px 0 0;
 }
+
 .section-head p{
  max-width:360px;
  font-size:14px;
  line-height:1.9;
  color:var(--muted);
 }
-.cuts{padding:115px 0 125px}
+
+/* GALLERY */
+
+.cuts{
+ padding:115px 0 125px;
+}
+
 .cuts-grid{
  display:grid;
  grid-template-columns:1.15fr .85fr;
  gap:24px;
 }
+
 .cut-main{
  position:relative;
  min-height:750px;
  overflow:hidden;
  margin:0;
 }
+
 .cut-main img{
  width:100%;
  height:100%;
  object-fit:cover;
  object-position:center;
 }
+
 .cut-main:after,
 .cut-secondary figure:after{
  content:"";
@@ -351,6 +450,7 @@ button,a{-webkit-tap-highlight-color:transparent}
  background:linear-gradient(0deg,#000b,transparent 45%);
  pointer-events:none;
 }
+
 .cut-label{
  position:absolute;
  z-index:2;
@@ -359,22 +459,26 @@ button,a{-webkit-tap-highlight-color:transparent}
  font:400 42px Anton,sans-serif;
  text-transform:uppercase;
 }
+
 .cut-secondary{
  display:grid;
  gap:24px;
 }
+
 .cut-secondary figure{
  margin:0;
  min-height:360px;
  position:relative;
  overflow:hidden;
 }
+
 .cut-secondary img{
  width:100%;
  height:100%;
  object-fit:cover;
  object-position:center 38%;
 }
+
 .cut-secondary figcaption{
  position:absolute;
  z-index:2;
@@ -383,8 +487,15 @@ button,a{-webkit-tap-highlight-color:transparent}
  font:400 30px Anton,sans-serif;
  text-transform:uppercase;
 }
-.cuts img{transition:transform .55s}
-.cuts figure:hover img{transform:scale(1.045)}
+
+.cuts img{
+ transition:transform .55s;
+}
+
+.cuts figure:hover img{
+ transform:scale(1.045);
+}
+
 .cuts-foot{
  display:flex;
  justify-content:space-between;
@@ -392,17 +503,25 @@ button,a{-webkit-tap-highlight-color:transparent}
  gap:20px;
  margin-top:35px;
 }
+
 .cuts-foot p{
  font-size:12px;
  color:var(--muted);
  line-height:1.7;
 }
+
+/* SERVICES */
+
 .menu{
  background:var(--paper);
  color:var(--ink);
  padding:115px 0 125px;
 }
-.menu .eyebrow{color:#8c7131}
+
+.menu .eyebrow{
+ color:#8c7131;
+}
+
 .menu-intro{
  display:flex;
  justify-content:space-between;
@@ -410,13 +529,18 @@ button,a{-webkit-tap-highlight-color:transparent}
  gap:30px;
  margin-bottom:45px;
 }
+
 .menu-intro p{
  max-width:350px;
  color:#69635a;
  line-height:1.85;
  font-size:14px;
 }
-.menu-list{border-top:2px solid var(--ink)}
+
+.menu-list{
+ border-top:2px solid var(--ink);
+}
+
 .menu-item{
  display:grid;
  grid-template-columns:1fr auto;
@@ -426,26 +550,31 @@ button,a{-webkit-tap-highlight-color:transparent}
  padding:25px 4px;
  transition:padding .2s,background .2s;
 }
+
 .menu-item:hover{
  padding-left:17px;
  padding-right:17px;
  background:#e7dfd0;
 }
+
 .menu-item h3{
  font:400 clamp(29px,4vw,49px) Anton,sans-serif;
  text-transform:uppercase;
  margin:0 0 7px;
 }
+
 .menu-item p{
  margin:0;
  font-size:13px;
  line-height:1.7;
  color:#6b655c;
 }
+
 .menu-price{
  font:400 clamp(24px,3.2vw,39px) Anton,sans-serif;
  white-space:nowrap;
 }
+
 .menu-price small{
  display:block;
  text-align:right;
@@ -454,44 +583,60 @@ button,a{-webkit-tap-highlight-color:transparent}
  text-transform:uppercase;
  letter-spacing:.12em;
 }
+
 .menu-note{
  font-size:12px;
  color:#6b655c;
  line-height:1.8;
  margin:22px 0 0;
 }
-.menu .btn{margin-top:30px}
+
+.menu .btn{
+ margin-top:30px;
+}
+
+/* STORY */
+
 .story{
  display:grid;
  grid-template-columns:1fr 1fr;
  background:#211e18;
 }
+
 .story-photo{
  min-height:630px;
  position:relative;
 }
+
 .story-photo img{
  width:100%;
  height:100%;
  object-fit:cover;
 }
+
 .story-copy{
  padding:90px max(28px,calc((100vw - var(--max))/2)) 90px 7vw;
  display:flex;
  flex-direction:column;
  justify-content:center;
 }
+
 .story-copy h2{
  font-size:clamp(68px,7vw,110px);
  margin:20px 0 28px;
 }
-.story-copy h2 span{color:var(--gold)}
+
+.story-copy h2 span{
+ color:var(--gold);
+}
+
 .story-copy p{
  font-size:14px;
  line-height:2;
  color:#bdb5a7;
  max-width:480px;
 }
+
 .story-stat{
  display:flex;
  align-items:center;
@@ -500,10 +645,12 @@ button,a{-webkit-tap-highlight-color:transparent}
  border-top:1px solid var(--line);
  padding-top:25px;
 }
+
 .story-stat strong{
  font:400 75px Anton,sans-serif;
  color:var(--gold);
 }
+
 .story-stat span{
  font-size:12px;
  font-weight:700;
@@ -511,62 +658,83 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:.08em;
  text-transform:uppercase;
 }
-.reviews{padding:100px 0 105px}
+
+/* REVIEWS */
+
+.reviews{
+ padding:105px 0 110px;
+}
+
 .review-layout{
  display:grid;
  grid-template-columns:.8fr 1.2fr;
  gap:65px;
  align-items:start;
 }
+
 .review-left h2{
  font-size:clamp(75px,8vw,125px);
  margin:20px 0 0;
 }
-.review-left h2 span{color:var(--gold)}
+
+.review-left h2 span{
+ color:var(--gold);
+}
+
 .review-left p{
  color:var(--muted);
  line-height:1.9;
  font-size:14px;
  max-width:330px;
 }
+
 .rating-strip{
  display:flex;
  align-items:center;
  gap:16px;
  margin:25px 0;
 }
+
 .rating-number{
  font:400 70px Anton,sans-serif;
  color:var(--gold);
  line-height:1;
 }
+
 .rating-info{
  font-size:12px;
  line-height:1.7;
  color:var(--muted);
 }
+
 .rating-info strong{
  display:block;
  color:var(--gold);
  letter-spacing:3px;
  font-size:16px;
 }
+
 .review-panel{
  border-top:2px solid var(--gold);
  padding:32px 0 0;
+ min-width:0;
 }
+
 .review-stars{
  font-size:19px;
  letter-spacing:5px;
  color:var(--gold);
 }
+
 .review-quote{
- font-size:clamp(24px,2.6vw,35px);
+ font-size:clamp(23px,2.5vw,35px);
  font-weight:600;
- line-height:1.45;
- margin:24px 0;
- min-height:100px;
+ line-height:1.5;
+ margin:25px 0;
+ min-height:155px;
+ overflow-wrap:break-word;
 }
+
 .review-person{
  font-size:12px;
  font-weight:800;
@@ -574,20 +742,25 @@ button,a{-webkit-tap-highlight-color:transparent}
  letter-spacing:.1em;
  text-transform:uppercase;
 }
+
 .review-nav{
  display:flex;
  justify-content:space-between;
  align-items:center;
  margin-top:32px;
 }
+
 .review-count{
  color:var(--muted);
  font-size:12px;
+ font-variant-numeric:tabular-nums;
 }
+
 .review-buttons{
  display:flex;
  gap:8px;
 }
+
 .review-buttons button{
  width:48px;
  height:48px;
@@ -595,57 +768,67 @@ button,a{-webkit-tap-highlight-color:transparent}
  border:1px solid #6c5d3e;
  color:white;
  font-size:23px;
+ transition:background .2s,color .2s;
 }
+
 .review-buttons button:hover{
  background:var(--gold);
  color:var(--ink);
 }
-.review-buttons button:disabled{
- opacity:.35;
- cursor:not-allowed;
-}
-.review-buttons button:disabled:hover{
- background:transparent;
- color:white;
-}
+
 .review-source{
- margin-top:22px;
+ margin-top:24px;
  color:var(--muted);
  font-size:12px;
  line-height:1.7;
 }
+
+/* VISIT */
+
 .visit{
  background:var(--gold);
  color:var(--ink);
  padding:100px 0;
 }
+
 .visit-grid{
  display:grid;
  grid-template-columns:1fr 1fr;
  gap:75px;
  align-items:center;
 }
+
 .visit h2{
  font-size:clamp(80px,10vw,155px);
  margin:15px 0;
 }
+
 .visit h2 span{
  color:transparent;
  -webkit-text-stroke:2px var(--ink);
 }
+
 .visit p{
  max-width:420px;
  line-height:1.85;
  font-size:14px;
 }
+
 .visit .btn{
  background:var(--ink);
  color:var(--paper);
  border-color:var(--ink);
  margin-top:18px;
 }
-.visit .btn:hover{background:#302a20}
-.visit-details{border-top:2px solid var(--ink)}
+
+.visit .btn:hover{
+ background:#302a20;
+}
+
+.visit-details{
+ border-top:2px solid var(--ink);
+}
+
 .visit-row{
  display:grid;
  grid-template-columns:125px 1fr;
@@ -653,31 +836,39 @@ button,a{-webkit-tap-highlight-color:transparent}
  padding:23px 0;
  border-bottom:1px solid #11100d55;
 }
+
 .visit-row b{
  font-size:11px;
  letter-spacing:.1em;
  text-transform:uppercase;
 }
+
 .visit-row span{
  font-size:14px;
  line-height:1.7;
 }
+
 .visit-row a{
  text-decoration:underline;
  text-underline-offset:4px;
 }
+
+/* FOOTER */
+
 footer{
  padding:34px 0;
  background:var(--ink);
  color:var(--muted);
  font-size:12px;
 }
+
 .footer-inner{
  display:flex;
  justify-content:space-between;
  gap:20px;
  align-items:center;
 }
+
 .footer-brand{
  display:flex;
  align-items:center;
@@ -685,120 +876,278 @@ footer{
  color:var(--paper);
  font:400 20px Anton,sans-serif;
 }
+
 .footer-brand img{
  width:45px;
  height:45px;
  object-fit:contain;
  border-radius:50%;
 }
-.mobile-bar{display:none}
+
+.mobile-bar{
+ display:none;
+}
+
+/* TABLET */
 
 @media(max-width:1050px){
- .desktop-nav{display:none}
- .hero h1{font-size:clamp(85px,11vw,140px)}
- .intro-grid{gap:45px}
- .story-copy{padding:65px 35px}
- .review-layout{gap:40px}
+
+ .desktop-nav{
+  display:none;
+ }
+
+ .hero h1{
+  font-size:clamp(85px,11vw,140px);
+ }
+
+ .intro-grid{
+  gap:45px;
+ }
+
+ .story-copy{
+  padding:65px 35px;
+ }
+
+ .review-layout{
+  gap:40px;
+ }
 }
+
+/* MOBILE */
+
 @media(max-width:750px){
- .container{width:calc(100% - 36px)}
- .header-inner{height:76px}
- .brand img{width:49px;height:49px}
- .brand-word{font-size:19px}
- .brand-word small{font-size:7px}
+
+ .container{
+  width:calc(100% - 36px);
+ }
+
+ .header-inner{
+  height:76px;
+ }
+
+ .brand img{
+  width:49px;
+  height:49px;
+ }
+
+ .brand-word{
+  font-size:19px;
+ }
+
+ .brand-word small{
+  font-size:7px;
+ }
+
  .site-header .btn{
   min-height:42px;
   padding:10px 12px;
   font-size:10px;
   gap:6px;
  }
+
  .hero{
   display:block;
   min-height:780px;
  }
+
  .hero-side{
   position:absolute;
   inset:0;
   min-height:0;
  }
- .hero-side img{object-position:54% center}
+
+ .hero-side img{
+  object-position:54% center;
+ }
+
  .hero-side:before{
   background:
-  linear-gradient(90deg,#11100de8,#11100d50),
-  linear-gradient(0deg,#11100d 0%,transparent 48%);
+   linear-gradient(90deg,#11100de8,#11100d50),
+   linear-gradient(0deg,#11100d 0%,transparent 48%);
  }
+
  .hero-copy{
   min-height:780px;
   padding:145px 22px 105px;
   justify-content:center;
  }
+
  .hero h1{
   font-size:clamp(78px,15.2vw,122px);
   margin:24px 0;
  }
+
  .hero-description{
   max-width:420px;
   font-size:13px;
   line-height:1.85;
  }
- .hero-vertical{display:none}
- .hero-actions{gap:10px}
- .hero-actions .btn{font-size:11px}
- .marquee-track span{font-size:15px}
- .intro{padding:80px 0}
+
+ .hero-vertical{
+  display:none;
+ }
+
+ .hero-actions{
+  gap:10px;
+ }
+
+ .hero-actions .btn{
+  font-size:11px;
+ }
+
+ .marquee-track span{
+  font-size:15px;
+ }
+
+ .intro{
+  padding:80px 0;
+ }
+
  .intro-grid{
   grid-template-columns:1fr;
   gap:30px;
  }
- .intro-title{font-size:clamp(75px,15vw,120px)}
- .intro-content{padding-left:22px}
- .intro-content p{font-size:14px}
- .section-head,.menu-intro{display:block}
- .section-title{font-size:clamp(67px,13vw,105px)}
- .cuts,.menu{padding:80px 0}
+
+ .intro-title{
+  font-size:clamp(75px,15vw,120px);
+ }
+
+ .intro-content{
+  padding-left:22px;
+ }
+
+ .intro-content p{
+  font-size:14px;
+ }
+
+ .section-head,
+ .menu-intro{
+  display:block;
+ }
+
+ .section-title{
+  font-size:clamp(67px,13vw,105px);
+ }
+
+ .cuts,
+ .menu{
+  padding:80px 0;
+ }
+
  .cuts-grid{
   grid-template-columns:1fr;
   gap:12px;
  }
- .cut-main{min-height:520px}
+
+ .cut-main{
+  min-height:520px;
+ }
+
  .cut-secondary{
   grid-template-columns:1fr 1fr;
   gap:12px;
  }
- .cut-secondary figure{min-height:290px}
- .cut-label{font-size:35px}
- .cut-secondary figcaption{font-size:22px}
- .cuts-foot{display:block}
- .cuts-foot .btn{margin-top:12px}
- .menu-item{padding:22px 2px}
- .menu-item h3{font-size:31px}
- .menu-price{font-size:26px}
- .story{grid-template-columns:1fr}
- .story-photo{min-height:390px}
- .story-copy{padding:65px 22px 75px}
- .story-copy h2{font-size:80px}
- .reviews{padding:75px 0 80px}
+
+ .cut-secondary figure{
+  min-height:290px;
+ }
+
+ .cut-label{
+  font-size:35px;
+ }
+
+ .cut-secondary figcaption{
+  font-size:22px;
+ }
+
+ .cuts-foot{
+  display:block;
+ }
+
+ .cuts-foot .btn{
+  margin-top:12px;
+ }
+
+ .menu-item{
+  padding:22px 2px;
+ }
+
+ .menu-item h3{
+  font-size:31px;
+ }
+
+ .menu-price{
+  font-size:26px;
+ }
+
+ .story{
+  grid-template-columns:1fr;
+ }
+
+ .story-photo{
+  min-height:390px;
+ }
+
+ .story-copy{
+  padding:65px 22px 75px;
+ }
+
+ .story-copy h2{
+  font-size:80px;
+ }
+
+ .reviews{
+  padding:75px 0 80px;
+ }
+
  .review-layout{
   grid-template-columns:1fr;
   gap:28px;
  }
- .review-left h2{font-size:85px}
- .review-left p{margin-bottom:18px}
- .rating-strip{margin:18px 0}
+
+ .review-left h2{
+  font-size:85px;
+ }
+
+ .review-left p{
+  margin-bottom:18px;
+ }
+
+ .rating-strip{
+  margin:18px 0;
+ }
+
  .review-quote{
   min-height:0;
-  font-size:27px;
+  font-size:clamp(23px,5.6vw,29px);
   margin:22px 0;
  }
- .review-nav{margin-top:25px}
- .visit{padding:75px 0}
+
+ .review-nav{
+  margin-top:25px;
+ }
+
+ .visit{
+  padding:75px 0;
+ }
+
  .visit-grid{
   grid-template-columns:1fr;
   gap:45px;
  }
- .visit h2{font-size:95px}
- .footer-inner{display:block}
- .footer-brand{margin-bottom:18px}
+
+ .visit h2{
+  font-size:95px;
+ }
+
+ .footer-inner{
+  display:block;
+ }
+
+ .footer-brand{
+  margin-bottom:18px;
+ }
+
  .mobile-bar{
   display:flex;
   position:fixed;
@@ -812,6 +1161,7 @@ footer{
   gap:10px;
   border-top:1px solid #796638;
  }
+
  .mobile-bar a{
   flex:1;
   text-align:center;
@@ -822,33 +1172,81 @@ footer{
   font-weight:800;
   text-transform:uppercase;
  }
+
  .mobile-bar a:last-child{
   background:#29251e;
   color:white;
   border:1px solid #ffffff55;
  }
- body{padding-bottom:75px}
+
+ body{
+  padding-bottom:75px;
+ }
 }
+
 @media(max-width:420px){
- .brand-word{font-size:17px}
- .brand-word small{letter-spacing:.13em}
- .hero h1{font-size:clamp(68px,15vw,85px)}
+
+ .brand-word{
+  font-size:17px;
+ }
+
+ .brand-word small{
+  letter-spacing:.13em;
+ }
+
+ .hero h1{
+  font-size:clamp(68px,15vw,85px);
+ }
+
  .hero-copy{
   padding-left:18px;
   padding-right:18px;
  }
- .hero-actions .btn{padding:13px 14px}
- .cut-main{min-height:430px}
- .cut-secondary figure{min-height:230px}
- .menu-item h3{font-size:27px}
- .menu-price{font-size:24px}
- .visit h2{font-size:78px}
- .visit-row{grid-template-columns:95px 1fr}
+
+ .hero-actions .btn{
+  padding:13px 14px;
+ }
+
+ .cut-main{
+  min-height:430px;
+ }
+
+ .cut-secondary figure{
+  min-height:230px;
+ }
+
+ .menu-item h3{
+  font-size:27px;
+ }
+
+ .menu-price{
+  font-size:24px;
+ }
+
+ .visit h2{
+  font-size:78px;
+ }
+
+ .visit-row{
+  grid-template-columns:95px 1fr;
+ }
 }
+
 @media(prefers-reduced-motion:reduce){
- html{scroll-behavior:auto}
- .marquee-track{animation:none}
- *,*:before,*:after{transition:none!important}
+
+ html{
+  scroll-behavior:auto;
+ }
+
+ .marquee-track{
+  animation:none;
+ }
+
+ *,
+ *:before,
+ *:after{
+  transition:none!important;
+ }
 }
 </style>
 </head>
@@ -857,8 +1255,10 @@ footer{
 
 <header class="site-header">
  <div class="container header-inner">
-  <a class="brand" href="#home">
+
+  <a class="brand" href="#home" aria-label="Backyard Barbers home">
    <img src="logo.jpg" alt="Backyard Barbers gold and black logo">
+
    <span class="brand-word">
     BACKYARD BARBERS
     <small>DARWIN · NORTHERN TERRITORY</small>
@@ -873,16 +1273,22 @@ footer{
    <a href="#visit">Find us</a>
   </nav>
 
-  <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+  <a class="btn"
+     href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
    Book a cut <span class="arrow">↗</span>
   </a>
+
  </div>
 </header>
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
+
  <div class="hero-copy">
+
   <div class="hero-stamp">
    Millner, Darwin · Local barbering
   </div>
@@ -900,12 +1306,16 @@ footer{
   </p>
 
   <div class="hero-actions">
-   <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+
+   <a class="btn"
+      href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
     Secure your chair <span class="arrow">↗</span>
    </a>
+
    <a class="btn dark" href="#cuts">
     See the work ↓
    </a>
+
   </div>
  </div>
 
@@ -915,20 +1325,33 @@ footer{
        fetchpriority="high">
  </div>
 
- <div class="hero-vertical">BACKYARD BARBERS</div>
+ <div class="hero-vertical">
+  BACKYARD BARBERS
+ </div>
+
 </section>
 
-<div class="marquee" aria-label="Fresh fades, sharp lines, good people, Darwin made">
+<!-- MARQUEE -->
+
+<div class="marquee"
+     aria-label="Fresh fades, sharp lines, good people, Darwin made">
+
  <div class="marquee-track" aria-hidden="true">
   <span>FRESH FADES ✦ SHARP LINES ✦ GOOD PEOPLE ✦ DARWIN MADE ✦ </span>
   <span>FRESH FADES ✦ SHARP LINES ✦ GOOD PEOPLE ✦ DARWIN MADE ✦ </span>
  </div>
+
 </div>
 
+<!-- INTRO -->
+
 <section class="intro">
+
  <div class="container intro-grid">
+
   <div>
    <div class="eyebrow">The Backyard standard</div>
+
    <h2 class="display intro-title">
     NO<br>
     ORDINARY
@@ -937,25 +1360,36 @@ footer{
   </div>
 
   <div class="intro-content">
+
    <p>
     <strong>Good cuts. Good company. No unnecessary fuss.</strong>
     Backyard Barbers is a Darwin local built around the
     craft of barbering and the people who sit in the chair.
    </p>
+
    <p>
     Whether you're after a fresh skin fade, a clean
     classic cut or a beard tidy-up, the goal is simple:
     walk out looking sharp and feeling even better.
    </p>
+
    <a class="btn" href="#services">
     Explore the services ↗
    </a>
+
   </div>
+
  </div>
+
 </section>
 
+<!-- OUR WORK -->
+
 <section class="cuts" id="cuts">
+
  <div class="container">
+
+ 
   <div class="section-head">
    <div>
     <div class="eyebrow">Straight from the chair</div>
@@ -986,10 +1420,10 @@ footer{
     </figure>
 
     <figure>
-     <img src="haircut.jpg"
-          alt="Textured haircut with a clean finish"
+     <img src="shopfront.jpg"
+          alt="Backyard Barbers Darwin shopfront"
           loading="lazy">
-     <figcaption>THE FINISH.</figcaption>
+     <figcaption>THE SPOT.</figcaption>
     </figure>
    </div>
   </div>
@@ -999,16 +1433,18 @@ footer{
     Fresh cuts, clean finishes and attention to detail.
     Ready for yours?
    </p>
-   
-<a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
+   <a class="btn" href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
     Get in the chair ↗
    </a>
   </div>
  </div>
 </section>
 
+<!-- SERVICES -->
+
 <section class="menu" id="services">
  <div class="container">
+
   <div class="menu-intro">
    <div>
     <div class="eyebrow">The service menu</div>
@@ -1029,9 +1465,7 @@ footer{
      <h3>Standard Cut</h3>
      <p>A clean, classic cut made to suit your style.</p>
     </div>
-    <div class="menu-price">
-     <small>From</small>$40
-    </div>
+    <div class="menu-price"><small>From</small>$40</div>
    </div>
 
    <div class="menu-item">
@@ -1039,9 +1473,7 @@ footer{
      <h3>Zero / Skin Fade</h3>
      <p>Precise blending for a sharp, fresh finish.</p>
     </div>
-    <div class="menu-price">
-     <small>From</small>$50
-    </div>
+    <div class="menu-price"><small>From</small>$50</div>
    </div>
 
    <div class="menu-item">
@@ -1049,9 +1481,7 @@ footer{
      <h3>Zero / Skin Fade + Beard</h3>
      <p>A fresh fade paired with beard grooming.</p>
     </div>
-    <div class="menu-price">
-     <small>From</small>$70
-    </div>
+    <div class="menu-price"><small>From</small>$70</div>
    </div>
 
    <div class="menu-item">
@@ -1059,9 +1489,7 @@ footer{
      <h3>Standard Cut + Beard</h3>
      <p>The complete tidy-up for hair and beard.</p>
     </div>
-    <div class="menu-price">
-     <small>From</small>$60
-    </div>
+    <div class="menu-price"><small>From</small>$60</div>
    </div>
 
    <div class="menu-item">
@@ -1069,9 +1497,7 @@ footer{
      <h3>Beard Trim &amp; Line-Up</h3>
      <p>Clean shaping and a neat, defined finish.</p>
     </div>
-    <div class="menu-price">
-     <small>From</small>$20
-    </div>
+    <div class="menu-price"><small>From</small>$20</div>
    </div>
 
    <div class="menu-item">
@@ -1079,9 +1505,7 @@ footer{
      <h3>Student Zero / Skin Fade</h3>
      <p>Fresh fades at the student service rate.</p>
     </div>
-    <div class="menu-price">
-     <small>From</small>$45
-    </div>
+    <div class="menu-price"><small>From</small>$45</div>
    </div>
 
   </div>
@@ -1096,6 +1520,8 @@ footer{
   </a>
  </div>
 </section>
+
+<!-- ABOUT -->
 
 <section class="story" id="about">
  <div class="story-photo">
@@ -1128,13 +1554,12 @@ footer{
 
   <div class="story-stat">
    <strong>5.0</strong>
-   <span>
-    Customer rating<br>
-    on Fresha
-   </span>
+   <span>Customer rating<br>on Fresha</span>
   </div>
  </div>
 </section>
+
+<!-- REVIEWS -->
 
 <section class="reviews" id="reviews">
  <div class="container review-layout">
@@ -1149,9 +1574,9 @@ footer{
    </h2>
 
    <p>
-    The people who sit in the chair say it best.
-    Here's what customers have to say about
-    Backyard Barbers.
+    From loyal regulars to families bringing in
+    their little ones, the customer experience
+    speaks for itself.
    </p>
 
    <div class="rating-strip">
@@ -1175,39 +1600,38 @@ footer{
    <blockquote class="review-quote"
                id="review-quote"
                aria-live="polite">
-    “Great service, very professional and friendly”
+    “Best haircut in Darwin, friendly staff and great atmosphere. Has been my regular for years.”
    </blockquote>
 
    <div class="review-person" id="review-person">
-    Douglas Z · Fresha
+    Anthony H. · Fresha
    </div>
 
    <div class="review-nav">
     <span class="review-count" id="review-count">
-     01 / 03
+     01 / 05
     </span>
 
     <div class="review-buttons">
-     <button id="review-prev"
-             type="button"
-             aria-label="Previous review">
-      ←
-     </button>
-     <button id="review-next"
-             type="button"
-             aria-label="Next review">
-      →
-     </button>
+     <button type="button"
+             id="review-prev"
+             aria-label="Previous customer review">←</button>
+
+     <button type="button"
+             id="review-next"
+             aria-label="Next customer review">→</button>
     </div>
    </div>
 
    <p class="review-source">
-    Customer feedback published on Fresha.
+    Customer reviews from Fresha.
    </p>
   </div>
 
  </div>
 </section>
+
+<!-- LOCATION -->
 
 <section class="visit" id="visit">
  <div class="container visit-grid">
@@ -1249,9 +1673,7 @@ footer{
    <div class="visit-row">
     <b>Phone</b>
     <span>
-     <a href="tel:+61403483773">
-      0403 483 773
-     </a>
+     <a href="tel:+61403483773">0403 483 773</a>
     </span>
    </div>
 
@@ -1293,8 +1715,11 @@ footer{
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
  <div class="container footer-inner">
+
   <div class="footer-brand">
    <img src="logo.jpg"
         alt="Backyard Barbers logo"
@@ -1310,82 +1735,173 @@ footer{
   <div>
    Concept by Competitive Marketing
   </div>
+
  </div>
 </footer>
+
+<!-- MOBILE BOOKING BAR -->
 
 <div class="mobile-bar" aria-label="Quick booking actions">
  <a href="https://www.fresha.com/a/backyard-barbers-darwin-millner-356-366-bagot-road-djw7waom">
   BOOK ONLINE ↗
  </a>
+
  <a href="tel:+61403483773">
   CALL NOW ↗
  </a>
 </div>
 
+<!-- JAVASCRIPT -->
+
 <script>
 (function(){
  "use strict";
 
- const year=document.getElementById("year");
+ const year = document.getElementById("year");
+
  if(year){
-  year.textContent=new Date().getFullYear();
+  year.textContent = new Date().getFullYear();
  }
 
- const reviews=[
+ const reviews = [
   {
-   quote:"Great service, very professional and friendly",
-   person:"Douglas Z · Fresha"
+   quote:"Best haircut in Darwin, friendly staff and great atmosphere. Has been my regular for years.",
+   person:"Anthony H. · Fresha"
   },
   {
-   quote:"My boys are very happy with their cuts, they will be coming back",
-   person:"Adrienne M · Fresha"
+   quote:"Awesome, convincing my son to get a haircut has been an almost impossible task. This is the first time that he's left the barbers with a cut that he loves.",
+   person:"Patrick S. · Fresha"
   },
   {
-   quote:"Really knows what he’s doing, 2nd time booking with him and has not made a single mistake.",
-   person:"Kieran F · Fresha"
+   quote:"Always a great haircut, friendly staff and good tunes.",
+   person:"Anthony H. · Fresha"
+  },
+  {
+   quote:"Mojay is a great bloke, was so welcoming and great to talk to! He also is a very talented barber!",
+   person:"Joel P. · Fresha"
+  },
+  {
+   quote:"We love coming to Backyard Barbers! They do a great job and are so good with my four year old who doesn’t love haircuts!",
+   person:"Fresha customer"
   }
  ];
 
- let current=0;
+ let current = 0;
 
- const quote=document.getElementById("review-quote");
- const person=document.getElementById("review-person");
- const count=document.getElementById("review-count");
- const prev=document.getElementById("review-prev");
- const next=document.getElementById("review-next");
+ const quoteElement =
+  document.getElementById("review-quote");
+
+ const personElement =
+  document.getElementById("review-person");
+
+ const countElement =
+  document.getElementById("review-count");
+
+ const previousButton =
+  document.getElementById("review-prev");
+
+ const nextButton =
+  document.getElementById("review-next");
 
  function showReview(index){
-  current=(index+reviews.length)%reviews.length;
 
-  if(quote){
-   quote.textContent="“"+reviews[current].quote+"”";
+  current =
+   (index + reviews.length) % reviews.length;
+
+  const selectedReview = reviews[current];
+
+  if(quoteElement){
+   quoteElement.textContent =
+    "“" + selectedReview.quote + "”";
   }
 
-  if(person){
-   person.textContent=reviews[current].person;
+  if(personElement){
+   personElement.textContent =
+    selectedReview.person;
   }
 
-  if(count){
-   count.textContent=
-    String(current+1).padStart(2,"0")+
-    " / "+
+  if(countElement){
+   countElement.textContent =
+    String(current + 1).padStart(2,"0") +
+    " / " +
     String(reviews.length).padStart(2,"0");
   }
+
  }
 
- if(prev){
-  prev.addEventListener("click",function(){
-   showReview(current-1);
+ if(previousButton){
+  previousButton.addEventListener("click",function(){
+   showReview(current - 1);
   });
  }
 
- if(next){
-  next.addEventListener("click",function(){
-   showReview(current+1);
+ if(nextButton){
+  nextButton.addEventListener("click",function(){
+   showReview(current + 1);
   });
+ }
+
+ let touchStartX = null;
+
+ if(quoteElement){
+
+  quoteElement.addEventListener(
+   "touchstart",
+   function(event){
+    touchStartX =
+     event.changedTouches[0].screenX;
+   },
+   {passive:true}
+  );
+
+  quoteElement.addEventListener(
+   "touchend",
+   function(event){
+
+    if(touchStartX === null){
+     return;
+    }
+
+    const touchEndX =
+     event.changedTouches[0].screenX;
+
+    const difference =
+     touchEndX - touchStartX;
+
+    if(Math.abs(difference) > 50){
+     if(difference < 0){
+      showReview(current + 1);
+     }else{
+      showReview(current - 1);
+     }
+    }
+
+    touchStartX = null;
+   },
+   {passive:true}
+  );
+
+  quoteElement.setAttribute("tabindex","0");
+
+  quoteElement.addEventListener(
+   "keydown",
+   function(event){
+
+    if(event.key === "ArrowRight"){
+     event.preventDefault();
+     showReview(current + 1);
+    }
+
+    if(event.key === "ArrowLeft"){
+     event.preventDefault();
+     showReview(current - 1);
+    }
+   }
+  );
  }
 
  showReview(0);
+
 })();
 </script>
 
